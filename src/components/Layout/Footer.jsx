@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="footerShow">
       <div>&copy; All Rights Reserved By Ammar.</div>
       <div>
-        <Link>
+        {/* <Link>
           <FaFacebookF />
         </Link>
         <Link>
@@ -19,7 +19,7 @@ const Footer = () => {
         </Link>
         <Link>
           <RiInstagramFill />
-        </Link>
+        </Link> */}
       </div>
     </footer>
   );

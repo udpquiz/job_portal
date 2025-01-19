@@ -4,9 +4,10 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
+  const navigate = useNavigate()
 
   const handleLogout = () => {
-    return <Navigate to="/login" />;
+    return navigate("/login");
   };
 
   return (
@@ -17,7 +18,7 @@ const Navbar = () => {
         </div>
 
         <h5>Welcome User</h5>
-        
+
         <ul className={!show ? "menu" : "show-menu menu"}>
           <li>
             <Link to={"/"} onClick={() => setShow(false)}>
@@ -25,22 +26,22 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to={"/job/getall"} onClick={() => setShow(false)}>
+            <Link onClick={() => setShow(false)}>
               ALL JOBS
             </Link>
           </li>
           <li>
-            <Link to={"/applications/me"} onClick={() => setShow(false)}>
+            <Link onClick={() => setShow(false)}>
             "MY APPLICATIONS"
             </Link>
           </li>
               <li>
-                <Link to={"/job/post"} onClick={() => setShow(false)}>
+                <Link onClick={() => setShow(false)}>
                   POST NEW JOB
                 </Link>
               </li>
               <li>
-                <Link to={"/job/me"} onClick={() => setShow(false)}>
+                <Link onClick={() => setShow(false)}>
                   VIEW YOUR JOBS
                 </Link>
               </li>
